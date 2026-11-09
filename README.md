@@ -89,7 +89,11 @@ The repo includes a `global.json` that accepts .NET 10 feature bands.
 ## Run
 
 ```bash
-./run.sh
+./run.sh          # Linux / macOS
+```
+
+```bat
+run.bat           :: Windows
 ```
 
 or directly:
@@ -221,6 +225,7 @@ deterministic (fixed random seed) and writes pretty-compact JSON.
 .
 ├── replay.json                 # the 3,603-event screenplay
 ├── run.sh                      # dotnet run wrapper (finds a local ~/.dotnet too)
+├── run.bat                     # same, for Windows
 ├── global.json                 # pins .NET 10 feature band
 ├── src/EmptyCli/
 │   ├── Program.cs              # startup, args, Ctrl+C handling
