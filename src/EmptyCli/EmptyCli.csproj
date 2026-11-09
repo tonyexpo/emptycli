@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>EmptyCli</RootNamespace>
+    <AssemblyName>emptycli</AssemblyName>
+    <Version>0.1.0</Version>
+    <Authors>emptycli</Authors>
+    <Description>A fake agentic coding CLI that replays a 30 minute build session.</Description>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../replay.json" Link="replay.json" CopyToOutputDirectory="PreserveNewest" Condition="Exists('../../replay.json')" />
+  </ItemGroup>
+
+</Project>

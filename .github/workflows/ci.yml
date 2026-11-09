@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore src/EmptyCli/EmptyCli.csproj
+
+      - name: Build
+        run: dotnet build src/EmptyCli/EmptyCli.csproj -c Release --no-restore --nologo
+
+      - name: Verify formatting
+        run: dotnet format src/EmptyCli/EmptyCli.csproj --verify-no-changes --no-restore
+
+      - name: Validate replay
+        run: |
+          events=$(jq '.events | length' replay.json)
+          duration=$(jq '.meta.totalSeconds' replay.json)
+          echo "events=$events duration=${duration}s"
+          test "$events" -ge 3000
+          test "$duration" -ge 1500
+
+      - name: End-to-end replay smoke test
+        run: dotnet run --project src/EmptyCli -c Release --no-build -- --once --speed 1000 --no-tui > /dev/null
+
+      - name: Publish
+        run: dotnet publish src/EmptyCli/EmptyCli.csproj -c Release --no-build -o publish
