@@ -19,7 +19,7 @@
 
 ## What is this?
 
-`emptycli` is a **fake agentic coding CLI**: the look and feel of a real coding agent
+`emptycli` is a **fictional agentic coding CLI**: the look and feel of a real coding agent
 (streamed reasoning, tool calls, diffs, test output, todos, a live footer with context and
 cost) without the agent, the model, the bill or the work.
 
