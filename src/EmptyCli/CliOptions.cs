@@ -117,7 +117,7 @@ public sealed class CliOptions
 
     public static string HelpText =>
         """
-        emptycli — a fake agentic coding session in your terminal.
+        emptycli — a fictional agentic coding session in your terminal.
 
         Usage:
           emptycli [options]

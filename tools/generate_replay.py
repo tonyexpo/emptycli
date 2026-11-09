@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate replay.json: a ~30 minute fake agentic coding session for emptycli.
+Generate replay.json: a ~30 minute fictional agentic coding session for emptycli.
 
 The session is entirely fictional. No network access, package installs or
 deployments are performed: every tool call and command output is scripted.
@@ -370,7 +370,7 @@ THINKING_TESTS = (
     "I want the test pyramid to fail for the right reasons. Unit tests cover slug generation "
     "and the rate limiter; Playwright covers the marketing page, the magic-link login and the "
     "first-publish flow. The flaky part will be auth, so I'll introduce a deterministic test "
-    "login endpoint instead of scraping a fake inbox. That keeps the product path real and "
+    "login endpoint instead of scraping a fictional inbox. That keeps the product path real and "
     "the test path explicit."
 )
 
@@ -1213,7 +1213,7 @@ and rebuilds the public site in under 40 milliseconds.
 
     tl.think(
         "The hero has one job: explain the outcome in one line and make the primary action obvious. "
-        "I'm avoiding a rotating headline or a fake dashboard screenshot; the Markdown frame is the "
+        "I'm avoiding a rotating headline or a fictional dashboard screenshot; the Markdown frame is the "
         "product proof and it stays legible on a phone. The three stats are deliberately specific "
         "instead of round marketing numbers, because specificity reads as measured rather than "
         "invented."

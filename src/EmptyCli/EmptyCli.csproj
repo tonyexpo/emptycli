@@ -9,7 +9,7 @@
     <AssemblyName>emptycli</AssemblyName>
     <Version>0.1.0</Version>
     <Authors>emptycli</Authors>
-    <Description>A fake agentic coding CLI that replays a 30 minute build session.</Description>
+    <Description>A fictional agentic coding CLI that replays a 30 minute build session.</Description>
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
