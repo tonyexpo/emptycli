@@ -34,8 +34,8 @@ jobs:
           events=$(jq '.events | length' replay.json)
           duration=$(jq '.meta.totalSeconds' replay.json)
           echo "events=$events duration=${duration}s"
-          test "$events" -ge 3000
-          test "$duration" -ge 1500
+          jq -e '(.events | length) >= 3000' replay.json > /dev/null
+          jq -e '.meta.totalSeconds >= 1500' replay.json > /dev/null
 
       - name: End-to-end replay smoke test
         run: dotnet run --project src/EmptyCli -c Release --no-build -- --once --speed 1000 --no-tui > /dev/null
