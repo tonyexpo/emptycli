@@ -1,6 +1,6 @@
 # emptycli
 
-**A fake agentic coding session for your terminal.**
+**A fictional agentic coding session for your terminal.**
 
 `emptycli` replays a ~30 minute software build — recon, scaffold, marketing site, backend,
 tests, CI and deploy — with the look and feel of a real coding agent: streamed reasoning,
