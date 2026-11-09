@@ -1,12 +1,40 @@
+<div align="center">
+
 # emptycli
 
-**A fictional agentic coding session for your terminal.**
+**A CLI for lazy developers. Or for demos. Mostly for looking busy.**
 
-`emptycli` replays a ~30 minute software build — recon, scaffold, marketing site, backend,
-tests, CI and deploy — with the look and feel of a real coding agent: streamed reasoning,
-tool calls, diffs, command output, todos and a fixed live footer.
+*(Yes, it's sarcastic. Nothing here writes code. It just looks like it does.)*
 
-Everything is scripted in [`replay.json`](replay.json). There is **no network access, no
+[![CI](https://github.com/tonyexpo/emptycli/actions/workflows/ci.yml/badge.svg)](https://github.com/tonyexpo/emptycli/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![.NET 10](https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/download)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey)](#requirements)
+[![AI inside](https://img.shields.io/badge/AI%20inside-none-red)](#notes-and-limitations)
+[![Tokens burned](https://img.shields.io/badge/tokens%20burned-0-brightgreen)](#notes-and-limitations)
+
+<img src="docs/demo.gif" alt="emptycli demo: a fictional agentic coding session streaming in the terminal" width="800">
+
+</div>
+
+## What is this?
+
+`emptycli` is a **fake agentic coding CLI**: the look and feel of a real coding agent
+(streamed reasoning, tool calls, diffs, test output, todos, a live footer with context and
+cost) without the agent, the model, the bill or the work.
+
+Who it's for:
+
+- **Lazy developers** who want the terminal to look productive while they get coffee.
+- **Demos, talks and screen recordings** that need a convincing agent session, with no
+  network, no API keys and no flaky live model.
+- **Terminal UI nerds** curious about alternate screens, scroll regions and fixed footers.
+
+It is a joke with a working implementation. Please don't present it as real work to
+anyone who signs your paycheck.
+
+It replays a ~30 minute software build (recon, scaffold, marketing site, backend, tests, CI
+and deploy), scripted in [`replay.json`](replay.json). There is **no network access, no
 package install, no database and no deployment**. The project, token usage, model output and
 costs are fiction. The working directory, its folder name and the git branch shown in the
 footer are real.
@@ -14,6 +42,16 @@ footer are real.
 ```
   ◆  emptycli  ~/github/emptycli  main        DeepSeek V4.1 Flash 1017  ctx 18.4k  $0.2731  12:48
 ```
+
+## Quick start
+
+```bash
+git clone https://github.com/tonyexpo/emptycli.git
+cd emptycli
+./run.sh
+```
+
+Press `q` to quit when someone walks by. Or don't.
 
 ## What it does
 
